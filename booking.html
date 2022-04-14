@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flight booking</title>
+
+    <style>
+        div {
+            margin-top: 20px;
+        }
+
+        select {
+            width: 204px;
+            padding: 4px 5px;
+            margin: 0px;
+            text-align: center;
+        }
+
+        input {
+            padding: 4px 0px;
+        }
+
+        div{
+            display: inline-block;
+            margin-right:20px;
+        }
+        #adult, #child, #infant{
+            margin-right: 63px;
+        }
+
+        #departfill,
+        #returnfill {
+            width: 200px;
+            text-align: center;
+            padding: 4px 0px;
+            margin: 0px;
+        }
+
+        #currency {
+            color: red;
+            margin: 0px;
+        }
+
+        #currencylist {
+            width: 65px;
+            padding: 4px 0px;
+            margin: 0px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #qty div {
+            margin-left: 70px;
+        }
+
+        #search {
+            background-color: rgb(252, 129, 14);
+            color: white;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="get">
+        <div>
+            <label for="start">Flying from <br>
+                <select id="start" name="start">
+                    <option value="Bangkok, Thailand">Bangkok, Thailand</option>
+                    <option value="Chiang Mai, Thailand">Chiang Mai, Thailand</option>
+                    <option value="Phuket, Thailand">Phuket, Thailand</option>
+                    <option value="Hat Yai, Yhailand">Hat Yai, Yhailand</option>
+                    <option value="Chiang Rai, Thailand">Chiang Rai, Thailand</option>
+                    <option value="Singapore, Singapore">Singapore, Singapore</option>
+                    <option value="Jakarta, Indonesia">Jakarta, Indonesia</option>
+                    <option value="Kuala Lumpur, Malaysia">Kuala Lumpur, Malaysia</option>
+                    <option value="Sydney, Australia">Sydney, Australia</option>
+                    <option value="Istanbul, Turkey">Istanbul, Turkey</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label for="end">To <br>
+                <select id="end" name="end">
+                    <option value="Bangkok, Thailand">Bangkok, Thailand</option>
+                    <option value="Chiang Mai, Thailand">Chiang Mai, Thailand</option>
+                    <option value="Phuket, Thailand">Phuket, Thailand</option>
+                    <option value="Hat Yai, Yhailand">Hat Yai, Yhailand</option>
+                    <option value="Chiang Rai, Thailand">Chiang Rai, Thailand</option>
+                    <option value="Singapore, Singapore">Singapore, Singapore</option>
+                    <option value="Jakarta, Indonesia">Jakarta, Indonesia</option>
+                    <option value="Kuala Lumpur, Malaysia">Kuala Lumpur, Malaysia</option>
+                    <option value="Sydney, Australia">Sydney, Australia</option>
+                    <option value="Istanbul, Turkey">Istanbul, Turkey</option>
+                </select>
+            </label>
+        </div> <br>
+        <div>
+            <label>Departing <br>
+                <input id="departfill" type="date" name="departing">
+            </label>
+        </div>
+        <div>
+            <label>Returning <br>
+                <input id="returnfill" type="date" name="returning">
+            </label>
+        </div> <br>
+        <div id="adult">
+            <label>Adult</label> <br>
+            <input name="adult" type="number" value="1" min="1" max="5">
+        </div>
+        <div id="child">
+            <label>Child</label> <br>
+            <input name="child" type="number" value="0" min="0" max="5">
+        </div>
+        <div id="infant">
+            <label>Infant</label> <br>
+            <input name="infant" type="number" value="0" min="0" max="2">
+        </div>
+        <div>
+            <label id="currency">Currency</label> <br>
+            <select name="currency" id="currencylist">
+                <option value="THB">THB</option>
+                <option value="SGD">SGD</option>
+                <option value="IDR">IDR</option>
+                <option value="MYR">MYR</option>
+                <option value="AUD">AUD</option>
+                <option value="TRY">TRY</option>
+            </select>
+        </div> <br>
+        <input id="search" type="submit" value="SEARCH">
+    </form>
+</body>
+
+</html>
